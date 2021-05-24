@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fenix&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    background-color: #6983aa;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 80vh;
+    /* height: 100%; */
+    width: 25vw;
+    /* border: 0.2rem solid black; */
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.8);
+}
+
+.heading {
+    background-color: #8566aa;
+    color: white;
+    padding: 6px 0 2px 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Fenix', serif;
+}
+
+.input {
+    border: none;
+    border-bottom: 3px solid #8566aa;
+    background: transparent;
+    font-size: 1.3rem;
+    width: 55%;
+    margin-left: 15%;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+    outline: none;
+    /* Used so that we donot see outline of the input field when selected.*/
+    /* font-weight: 500; */
+}
+
+.add {
+    background-color: #8566aa;
+    font-size: 1.7rem;
+    padding: 2%;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    font-weight: bold;
+    width: 2.5rem;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-family: 'Fenix', serif;
+    outline: none;
+}
+
+.add:hover {
+    background-color: #20bf6b;
+    transform: scale(1.5);
+    transition: all 0.3s linear;
+}
+
+.add:hover::after {
+    transition: all 0.3s linear;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 2rem;
+    /* background-color: pink; */
+    padding-left: 3.5rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #8566aa;
+    list-style-type: none;
+}
+
+.i-data {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+}
+
+.fa-times {
+    color: white;
+    border-radius: 100%;
+    padding: 2%;
+    background-color: #8566aa;
+    /* display: inline; */
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-times:hover {
+    background-color: #ff6257;
+}
+
+.item {
+    display: inline;
+    margin-left: 3%;
+}
+
+.item-area {
+    overflow: scroll;
+    height: 55vh;
+}
+
+@media screen and (max-width: 1056px) {
+    .main {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-height: 755px) {
+    .item-area {
+        height: 40vh;
+    }
 }
